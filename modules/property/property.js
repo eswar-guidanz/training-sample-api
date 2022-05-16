@@ -3,6 +3,7 @@ class property {
   async getAllpropertys(req, res) {
     try {
       const output = await propertyMssql.getAllpropertys();
+      res.set("Access-Control-Allow-Origin", "*");
       res.send(output);
     } catch (error) {
       console.log(error);
@@ -11,7 +12,7 @@ class property {
   async addproperty(req, res) {
     try {
       const output = await propertyMssql.addproperty(req);
-      res.send(output);
+      return true;
     } catch (error) {
       console.log(error);
     }

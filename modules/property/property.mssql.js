@@ -7,6 +7,7 @@ class propertyMSSql {
     return res.recordset;
   }
   async addproperty(prod) {
+    //console.log(prod);
     const conn = await mssqlcon.getConnection();
     const res = await conn
       .request()
