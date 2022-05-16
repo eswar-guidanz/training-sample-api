@@ -1,1 +1,3 @@
-# training-sample-api
+### npm install
+
+### npm start
